@@ -1,0 +1,30 @@
+// the underscore before the filename inform the compiler that the file in a partial being used in other fies and is not to be compiled
+
+
+// add your variables, mixins, functions etc in a config file
+
+$light-color: #f4f4f4;
+$font-stack: Arial, Helvetica, sans-serif;
+// $primary-color: #e0ffff;
+$primary-color: #0e6cff;
+$secondary-color: #ff870e;
+
+
+// scss function that determines color of the texts base on the lightness of the background
+
+@function set-text-color($color) {
+    @if(lightness($color) > 70) {
+        @return #333;
+    } @else {
+        @return #fff
+
+    }
+}
+
+// create mixins to set background-color and text-color
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
+
+

@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+
+    .showcase {
+        height: 400px;
+        &-content {
+            gap: 3rem;
+            flex-direction: column;
+        }
+    }
+  
+  }
